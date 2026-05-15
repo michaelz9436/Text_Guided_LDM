@@ -133,3 +133,12 @@ python train/train_scripts/train_regressor.py
 python train/train_scripts/train_diffusion.py
 ```
 *Training configurations can be modified in `train/train_scripts/configs/`.*
+
+## 🙏 Acknowledgements
+
+This project builds upon and is inspired by the following excellent works:
+
+- https://github.com/ehoogeboom/e3_diffusion_for_molecules  
+- https://github.com/MuZhao2333/MolFLAE  
+
+We sincerely thank the authors for open-sourcing their code and advancing research in equivariant generative modeling and molecular representation learning.
