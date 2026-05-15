@@ -109,7 +109,7 @@ Due to the fact that the authors of the original VAE have not yet publicly relea
 If you require access to the original dataset, please contact the authors of the following repository:
 https://github.com/MuZhao2333/MolFLAE
 
-To facilitate reproducibility and testing, we provide a small subset of the original dataset containing 3,000 molecules (see `train/data/zinc9m_subset`). This subset is intended solely for verifying the full data processing pipeline and training scripts.
+To facilitate reproducibility and testing, we provide a small subset of the original dataset containing 3,000 molecules (data in `train/data/zinc9m_subset`). This subset is intended solely for verifying the full data processing pipeline and training scripts.
 We provide a complete, self-contained pipeline for data processing and training (using this subset):
 
 ### 1. Data Preparation
@@ -132,4 +132,4 @@ python train/train_scripts/train_regressor.py
 # Train the Text-Conditioned Latent Diffusion Model
 python train/train_scripts/train_diffusion.py
 ```
-*Note: Training configurations can be modified in `train/train_scripts/configs/`.*
+*Training configurations can be modified in `train/train_scripts/configs/`.*
