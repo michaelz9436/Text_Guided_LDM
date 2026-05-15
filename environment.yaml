@@ -1,0 +1,36 @@
+name: tg_LDM
+channels:
+  - pytorch
+  - nvidia
+  - pyg
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch=2.4.0
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - pyg
+  - pytorch-scatter
+  - pytorch-sparse
+  - pytorch-cluster
+  - conda-forge::openbabel
+  - rdkit
+  - lmdb
+  - tqdm
+  - pyyaml
+  - scipy
+  - pip
+  - pip:
+    - sentence-transformers==5.1.2
+    - gradio==4.44.1
+    - gradio_client==1.3.0
+    - fastapi==0.128.8
+    - pydantic==2.10.6
+    - pydantic_core==2.27.2
+    - pytorch-lightning==2.5.0
+    - wandb
+    - absl-py
+    - fire
+    - torchdiffeq

@@ -1,0 +1,26 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Data and Outputs 
+train/data/zinc9m_atoms/*
+train/data/zinc9m_desc/*
+train/data/zinc9m_BERT_emb/*
+train/data/zinc9m_latent/*
+train/outputs/*
+outputs/
+
+# Checkpoints
+checkpoints/*.pt
+checkpoints/*.ckpt
+checkpoints/*.pth
+
+# Logs
+*.log

@@ -1,0 +1,52 @@
+# ==================================
+# LLDM (Linker Latent Diffusion) Config
+# ==================================
+
+# Experiment & Path settings
+exp_name: 'lldm_conditional_v2'
+data_dir: 'train/data/zinc9m_latent'
+max_chunks: 30       # 训练使用的数据块数量，设为 null 则加载全部
+output_dir: 'train/outputs'         # 在 lldm/ 目录下运行 train.py 时使用；若在仓库根目录运行可改为 lldm/outputs
+val_split: 0.1
+wandb: False
+
+# Architecture settings
+num_nodes: 10           # 与 ZincLatentDataset (10,3)/(10,32) 及 MolFLAE VAE 对齐
+latent_dim: 32        
+spatial_dim: 3        
+device: 'cuda:0'
+
+# Model settings
+model: 'egnn_dynamics'
+n_layers: 6           
+nf: 128               
+attention: True
+tanh: True
+norm_constant: 1
+sin_embedding: False
+aggregation_method: 'sum'
+
+# Diffusion settings
+diffusion_steps: 1000
+diffusion_noise_schedule: 'polynomial_2'
+diffusion_noise_precision: 1.0e-5
+diffusion_loss_type: 'l2'
+
+# Training settings
+n_epochs: 30
+batch_size: 512       
+lr: 0.0002
+clip_grad: True
+ema_decay: 0.999      
+num_workers: 4
+log_interval: 200     # 每隔多少个 Batch 打印一次 Loss
+save_interval: 5      # 每隔多少个 Epoch 保存一次 Checkpoint
+resume_checkpoint: null # 如果需要断点重训，填入类似 'lldm/outputs/lldm_unconditional_v1/last.pt'
+
+# ----------------------------------
+# Text Condition & CFG Settings
+# ----------------------------------
+text_emb_dir: 'train/data/zinc9m_BERT_emb'
+text_emb_dim: 384       # BERT 提取的维度
+uncond_prob: 0.15       # 训练时有 15% 的概率把文本置零，实现无条件训练 (CFG必备)
+guidance_scale: 7.0     # 采样时的控制强度 (>1.0, 越大越严格遵循文本)

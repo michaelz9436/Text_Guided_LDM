@@ -1,0 +1,21 @@
+# ==================================
+# Zinc9M NumAtoms Regressor Config
+# ==================================
+exp_name: 'zinc9m_num_atoms_regressor'
+latent_dir: 'train/data/zinc9m_latent'
+atoms_dir: 'train/data/zinc9m_atoms'
+output_dir: 'train/outputs'
+
+# Model Settings
+num_nodes: 10
+latent_dim: 32
+hidden_dim: 128
+num_layers: 3
+
+# Training Settings
+n_epochs: 50           # 900万数据量很大，每个epoch非常长，不需要100 epoch
+batch_size: 4096       # 内存数据加载，BatchSize 开到4096以加快训练
+lr: 0.001
+val_split: 0.05        # 5% 的数据用于验证 (约 45 万分子)
+log_interval: 200
+device: 'cuda:0'
