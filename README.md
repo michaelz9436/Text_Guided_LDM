@@ -7,6 +7,9 @@ This repository contains the official implementation for **Text-Guided 3D Molecu
 - **Strict E(3)-Equivariance**: Uses Cross-Attention to inject text semantic embeddings (384-dim BERT) exclusively into the invariant feature space ($Z_h$), perfectly preserving physical rotational and translational equivariance ($Z_x$).
 - **Classifier-Free Guidance (CFG)**: Supports seamless switching between Text-Conditioned and Unconditional generation.
 
+<p align="center">
+  <img src="assets/demo.gif" width="600"/>
+</p>
 
 ## 📁 Repository Structure
 ```text
