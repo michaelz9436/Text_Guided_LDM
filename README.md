@@ -53,6 +53,7 @@ All pretrained checkpoints are hosted on Hugging Face Hub:
 https://huggingface.co/Michaelz9436/text-guided-ldm-checkpoints  
 You can download them using wget:
 ```bash
+mkdir checkpoints
 cd checkpoints
 wget https://huggingface.co/Michaelz9436/text-guided-ldm-checkpoints/resolve/main/lldm.pt
 wget https://huggingface.co/Michaelz9436/text-guided-ldm-checkpoints/resolve/main/regressor.pt
