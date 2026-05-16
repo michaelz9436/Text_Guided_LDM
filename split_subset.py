@@ -36,8 +36,8 @@ env_out.close()
 
 
 new_indices_dict = {
-    'train_indices': np.arange(0, 900).tolist(),
-    'val_indices': np.arange(900, 1000).tolist(),
+    'train_indices': np.arange(0, 2700).tolist(),
+    'val_indices': np.arange(2700, 3000).tolist(),
     'test_indices': []
 }
 np.save(new_idx_path, new_indices_dict)
